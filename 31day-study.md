@@ -1,4 +1,5 @@
 ## 1.html 작업.
+```
 -- 로컬 디스크에 wbstudy > webwk 파일 만들기 
 https://code.visualstudio.com/download 홈페이지 들어가기 >  환경에 맞는 프로그램 다운로드. 
 한글 패치하기 (프로그램 안에korean 검색후 설치)
@@ -10,8 +11,7 @@ live server(riwick dey) > 설치하기. > open in 설치
  * <> : tag라고 한다.
  * <h1> : h1은 테그이름 첫 헤드 </h1> (스타트테그부터 엔드테그까지 합쳐서 요소라고한다.)
  * <p> 첫 문장 </p>
- * 
-
+```
 
 
 ## 2. html 코드 
