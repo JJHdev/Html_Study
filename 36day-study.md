@@ -179,3 +179,59 @@ form요소 action="요청을 처리할 서버측 문서"
   </body>
 </html>
 ```
+
+
+## 2. 자료 발송및 수신
+### 2-1. 클라이언트
+```
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>form01 문서</title>
+</head>
+<body>
+	<form name="frm1" id="fim1" method="get"  action="ok.jsp">
+		이름: <input type="text" name="mname" id="mname" size="10" maxlength="10" autofocus="autofocus"><br/>
+		비번: <input type= "password" name="mpwd" id="mpwd"><br/>
+		<input type="submit" name="submit" id="submit"><br/>
+	</form>
+</body>
+</html>
+```
+
+###2-2. 서버
+```
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ok</title>
+</head>
+<body>
+	<h3>ok.jsp문서</h3>
+	<h4>form01문서에서 user가 입력한 데이터를 받아서 처리하는 서버측 페이지이다.</h4>
+	<% /*한줄 주석문*/
+			// Scriptlet(시크립트릿) 자바코드를 실행
+		/*?mname=hong&mpwd=1234
+		    파라미터명이 mname의 값을 가져와 변수에 저장
+		    타입 변수명 = 객체참조변수명.메서드명(); 이용*/
+				String mname = request.getParameter("mname");
+		    String mpwd = request.getParameter("mpwd");
+	%>
+	
+	
+	<!-- html 주석문 -->
+	<%-- jsp주석문 Expression표현식(<%=%>) 브라우저화면에 출력 --%>
+	<!-- 유저가 입력한 데이터 -->
+	<ul>
+		<li>이름: <%=mname %></li>
+		<li>비번: <%=mpwd %></li>
+	</ul>
+</body>
+</html>
+```
